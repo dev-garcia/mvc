@@ -8,7 +8,7 @@ app.use(express.json());
 // Testar conexão com o banco de dados
 // const db = require("./db/models");
 
-// Inclusao dos controles
+// Inclusao dos controles/rotas
 const users = require("./controllers/users");
 
 // Criar as rotas
