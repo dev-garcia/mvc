@@ -1,6 +1,11 @@
 // Padrão Express
 const express = require("express");
+const cors = require("cors"); // Importar a biblioteca cors
+
 const app = express();
+
+// Permitir a conexão das portas diferentes do fron e back
+app.use(cors());
 
 // para podermos enviar os dados em formato json no thunder
 app.use(express.json());
