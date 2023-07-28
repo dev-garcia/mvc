@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const phone = document.getElementById("phone").value;
 
     try {
       const response = await fetch("http://localhost:8080/users", {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
           name: name,
           email: email,
           password: password,
+          phone: phone,
         }),
       });
 
