@@ -23,3 +23,13 @@ Sequelize / migrations...: https://sequelize.org/docs/v6/other-topics/migrations
 ## mySQL
 
 CREATE DATABASE residuum CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+Estou usando workbech:
+
+porta :3306
+
+o usuario esta configurado:
+
+root
+
+e password 123456
