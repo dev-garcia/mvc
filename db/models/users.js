@@ -13,30 +13,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   Users.init(
     {
-      name: DataTypes.STRING,
-      email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true, // Adicione essa opção para garantir a unicidade do e-mail
-        validate: {
-          isEmail: true, // Verifica se o valor é um e-mail válido
-          async isUnique(email) {
-            const user = await Users.findOne({ where: { email } });
-            if (user) {
-              throw new Error("E-mail já cadastrado!");
-            }
-          },
-        },
+      nome_usuario: DataTypes.STRING,
+      email_usuario: DataTypes.STRING,
+      senha_usuario: DataTypes.STRING,
+      telefone_usuario: DataTypes.NUMBER,
+      usuario_ativo: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
       },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      phone: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      image: DataTypes.STRING,
     },
     {
       sequelize,

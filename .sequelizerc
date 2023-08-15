@@ -1,15 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  config: path.resolve("db", "config", "config.js"), // alterado após mover as pastas geradas pelo sequelize-cli para a pasta db
-  "models-path": path.resolve("db", "models"),
+  config: path.resolve("db", "config", "config.js"), // alteramos o arquivo para .js como monstra na documentação e adicionamos a pasta "db" no diretório.
+  "models-path": path.resolve("db", "models"), // adicionamos a pasta "db" no diretório.
   "seeders-path": path.resolve("db", "seeders"),
   "migrations-path": path.resolve("db", "migrations"),
 };
-
-/* Com esta configuração, estamos informando a CLI para:
-
-Use config/database.json    // o arquivo para configurações de configuração;
-Use db/models              // como pasta de modelos;
-Use db/seeders            // como pasta de seeders;
-Use db/migrations        // como pasta de migrações. */

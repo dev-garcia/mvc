@@ -6,8 +6,16 @@ const Sequelize = require("sequelize");
 const process = require("process");
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || "development";
-const config = require(__dirname + "/../config/config.js")[env]; // alterado o config.json para js
+const config = require(__dirname + "/../config/config.js")[env];
 const db = {};
+
+// verificar a conexão com o banco de dados
+
+try {
+  console.log("Conexão com o banco de dados conectado com sucesso!");
+} catch (error) {
+  console.log("Erro: servidor não conectou com o banco de dados!", error);
+}
 
 let sequelize;
 if (config.use_env_variable) {

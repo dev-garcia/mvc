@@ -1,7 +1,6 @@
-// arquivo com as variaveis de ambiente
+// como recomenda na documentação = https://www.npmjs.com/package/dotenv
 require("dotenv").config();
 
-// exportar as credencias do banco de dados
 module.exports = {
   development: {
     username: process.env.DB_USER,
